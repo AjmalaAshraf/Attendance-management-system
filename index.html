@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="slider">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-user-graduate"></i>
+                        <h1 class="pace">PACE KNOWLEDGE CITY</h1>
+                    </div>
+                </div>
+            </header>
+            <div class="column">
+                <img src="https://www.pafgc.in/images/First-Grade/slider/1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-user-graduate"></i>
+                    <h1>PAFGC ATTENDANCE SHEET</h1>
+                </div>
+            </div>
+        </header>
+        <div class="dashboard">
+            <aside class="sidebar">
+                <h2><i class="fas fa-cog"></i> Manage Attendance</h2>
+                <form id="attendance-form">
+                    <div class="form-group">
+                        <label for="student-name">Student Name</label>
+                        <input type="text" id="student-name" class="form-control" placeholder="Enter student name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-id">Student ID</label>
+                        <input type="text" id="student-id" class="form-control" placeholder="Enter student ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class" class="form-control" required>
+                            <option value="">Select class</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BCOM">BCOM</option>
+                            <option value="FND">FND</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Attendance Status</label>
+                        <select id="status" class="form-control" required>
+                            <option value="">Select status</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                            <option value="Late">Late</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-block">Mark Attendance</button>
+                </form>
+            </aside>
+            <main class="main-content">
+                <div class="tabs">
+                    <div class="tab active" data-tab="attendance">Attendance Records</div>
+                    <div class="tab" data-tab="stats">Statistics</div>
+                    <div class="tab" data-tab="reports">Reports</div>
+                </div>
+                <div class="tab-content active" id="attendance-tab">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search students...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="attendance-table">
+                            <thead>
+                                <tr>
+                                    <th>Student ID</th>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="attendance-data">
+                                <!-- Data will be inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+            </main>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
